@@ -57,7 +57,7 @@ app.post("/api/create/thread", async (req, res) => {
     console.log({ thread, userId, threadId });
 });
 
-app.post("/api/create/reply", async (req, res) => {
+pp.post("/api/create/reply", async (req, res) => {
     const { id, userId, reply } = req.body;
     const result = threadList.filter((thread) => thread.id === id);
     const user = users.filter((user) => user.id === userId);
@@ -72,6 +72,36 @@ app.post("/api/create/reply", async (req, res) => {
     });
 });
 
+app.get("/api/all/threads", (req, res) => {
+    res.json({
+        threads: threadList,
+    });
+});
+
+app.post("/api/thread/like", (req, res) => {
+    const { threadId, userId } = req.body;
+    const result = threadList.filter((thread) => thread.id === threadId);
+    const threadLikes = result[0].likes;
+    const authenticateReaction = threadLikes.filter((user) => user === userId);
+    if (authenticateReaction.length === 0) {
+        threadLikes.push(userId);
+        return res.json({
+            message: "You've reacted to the post!",
+        });
+    }
+    res.json({
+        error_message: "You can only react once!",
+    });
+});
+
+app.post("/api/thread/replies", (req, res) => {
+    const { id } = req.body;
+    const result = threadList.filter((thread) => thread.id === id);
+    res.json({
+        replies: result[0].replies,
+        title: result[0].title,
+    });
+});
 
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
