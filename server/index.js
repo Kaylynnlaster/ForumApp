@@ -13,7 +13,6 @@ app.get("/api", (req, res) => {
     });
 });
 
-
 app.post("/api/register", async (req, res) => {
     const { email, password, username } = req.body;
     const id = generateID();
