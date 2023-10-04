@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk", sans-serif;
+    /* background-color: #674188; */
+}
+
+input {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-bottom: 25px;
+    font-size: 17px;
+    color: #674188;
+    background-color: #e7e7e7;
+}
+
+a {
+    text-decoration: none;
+    color: #674188;
+    font-weight: 600;
+}
+
+.register {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 30px;
+
+}
+
+.register p {
+    margin-bottom: 20px;
+}
+
+.registerTitle {
+    margin-bottom: 10px;
+    color: #674188;
+}
+
+.registerForm{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.registerBtn {
+    display: block;
+    width: 200px;
+    padding: 15px;
+    margin-left: 32%;
+    margin-top: 2%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fffbf5;
+    background-color: #674188;
+    margin-bottom: 15px;
+    transition: .5s ease all;
+    box-shadow: 0 9px #ae91ca;
+}
+
+.registerBtn:active {
+    box-shadow: 0 5px #5c4a6d;
+    transform: translateY(4px);
+}
