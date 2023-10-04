@@ -57,7 +57,7 @@ app.post("/api/create/thread", async (req, res) => {
     console.log({ thread, userId, threadId });
 });
 
-pp.post("/api/create/reply", async (req, res) => {
+app.post("/api/create/reply", async (req, res) => {
     const { id, userId, reply } = req.body;
     const result = threadList.filter((thread) => thread.id === id);
     const user = users.filter((user) => user.id === userId);
