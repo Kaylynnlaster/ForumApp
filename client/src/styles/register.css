@@ -86,12 +86,12 @@ a:hover {
     background-color: #674188;
     margin-bottom: 15px;
     transition: .2s ease all;
-    box-shadow: 0 9px #ae91ca;
+    box-shadow: 0 10px #ae91ca;
 }
 
 .registerBtn:active {
     box-shadow: 0 5px #5c4a6d;
-    transform: translateY(4px);
+    transform: translateY(10px);
 }
 
 .regCard {
