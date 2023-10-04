@@ -101,7 +101,7 @@ const Register = () => {
                                         />
                                     </InputGroup>
                                 </Form.Group>
-                                <Button className='registerBtn' type='submit'>Create Account</Button>
+                                <Button className='registerBtn' type='submit'>Create Account!</Button>
                             </Form>
                         </Container>
                     </Row>
