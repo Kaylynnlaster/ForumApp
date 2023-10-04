@@ -7,6 +7,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
+const users = [];
+const threadList = [];
+
+const generateID = () => Math.random().toString(36).substring(2, 10);
+
 app.get("/api", (req, res) => {
     res.json({
         message: "Hello world",
