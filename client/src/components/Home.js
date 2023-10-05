@@ -68,18 +68,18 @@ const Home = () => {
                 </form>
 
                 <div className='thread__container'>
-                    {threadList.map((thread) => (
-                        <div className='thread__item' key={thread.id}>
-                            <p>{thread.title}</p>
+                    {threadList.map((thr) => (
+                        <div className='thread__item' key={thr.id}>
+                            <p>{thr.title}</p>
                             <div className='react__container'>
                                 <Likes
-                                    numberOfLikes={thread.likes.length}
-                                    threadId={thread.id}
+                                    numberOfLikes={thr.likes.length}
+                                    threadId={thr.id}
                                 />
                                 <Comments
-                                    numberOfComments={thread.replies.length}
-                                    threadId={thread.id}
-                                    title={thread.title}
+                                    numberOfComments={thr.replies.length}
+                                    threadId={thr.id}
+                                    title={thr.title}
                                 />
                             </div>
                         </div>

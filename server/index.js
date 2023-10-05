@@ -55,10 +55,20 @@ app.post("/api/login", (req, res) => {
 // Forums
 
 app.post("/api/create/thread", async (req, res) => {
-    const { thread, userId } = req.body;
-    const threadId = generateID();
+	const { thread, userId } = req.body;
+	let threadId = generateID();
+	threadList.unshift({
+		id: threadId,
+		title: thread,
+		userId,
+		replies: [],
+		likes: [],
+	});
 
-    console.log({ thread, userId, threadId });
+    res.json({
+		message: "Thread created successfully!",
+		threads: threadList,
+	});
 });
 
 app.post("/api/create/reply", async (req, res) => {
