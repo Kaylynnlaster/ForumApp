@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Likes from "../utils/Likes";
-import Comments from "../utils/Comments";
 import { useNavigate } from "react-router-dom";
 import Nav from "./Nav";
+import '../styles/Home.css';
 
 const Home = () => {
     const [thread, setThread] = useState("");
@@ -67,21 +66,14 @@ const Home = () => {
                     <button className='homeBtn'>CREATE THREAD</button>
                 </form>
 
+                <h3>Threads</h3>
+                <p></p>
+
                 <div className='thread__container'>
+
                     {threadList.map((thr) => (
                         <div className='thread__item' key={thr.id}>
                             <p>{thr.title}</p>
-                            <div className='react__container'>
-                                <Likes
-                                    numberOfLikes={thr.likes.length}
-                                    threadId={thr.id}
-                                />
-                                <Comments
-                                    numberOfComments={thr.replies.length}
-                                    threadId={thr.id}
-                                    title={thr.title}
-                                />
-                            </div>
                         </div>
                     ))}
                 </div>

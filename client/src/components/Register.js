@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card'
 import InputGroup from 'react-bootstrap/InputGroup'
-import "../styles/register.css"
+import "../styles/Register.css"
 
 const Register = () => {
     const [username, setUsername] = useState("");

@@ -9,25 +9,25 @@
 
 input {
     padding: 10px;
-    width: 150%;
+    width: 100%;
     border: 1px solid #ddd;
     border-radius: 3px;
     margin-bottom: 25px;
     font-size: 17px;
     font-weight: 500;
-    color: #674188;
+    color: #24dbdb;
     background-color: #e7e7e7;
     margin-top: 5px;
 }
 
 label {
-    color: #976cbd;
+    color: #13e3dc;
     font-weight: 500;
 }
 
 a {
     text-decoration: none;
-    color: #976cbd;
+    color: #13e3dc;
     font-weight: 600;
 }
 
@@ -56,7 +56,7 @@ a:hover {
 
 .registerTitle {
     margin-bottom: 10px;
-    color: #976cbd;
+    color: #13e3dc;
     text-align: center;
     font-size: 40px;
 }
@@ -81,19 +81,19 @@ a:hover {
     font-size: 16px;
     font-weight: bold;
     color: #fffbf5;
-    background-color: #674188;
+    background-color: #0e87ea;
     margin-bottom: 15px;
     transition: .2s ease all;
-    box-shadow: 0 10px #ae91ca;
+    box-shadow: 0 10px #0ab8df;
 }
 
 .registerBtn:active {
-    box-shadow: 0 5px #5c4a6d;
+    box-shadow: 0 5px #13e3dc;
     transform: translateY(10px);
 }
 
 .regCard {
-    width: 580px;
+    width: 780px;
     background-color: #1e2833;
     height: 580px;
     border-radius: 40px;
@@ -103,7 +103,7 @@ a:hover {
     position: absolute;
     top: 50%;
     left: 50%;
-    box-shadow: 20px 5px 2px rgba(91, 50, 83, 0.3);
+    box-shadow: 20px 5px 2px rgba(93, 37, 82, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
